@@ -1,2 +1,2 @@
-# journey-web
+# journey
 A website for visit world (Visiting world without travelling).
