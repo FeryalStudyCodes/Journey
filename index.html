@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <section class="">
+    <section class="container">
         <h2>Travel with us</h2>
         <p>Hello in journey blog
         </p>
@@ -40,17 +40,29 @@
     <div class="container-fluid mt-5 discover">
         <h2>Discover Countries</h2>
        <div class="row"> 
-          <div class="col-md-2">
+          <div class="col">
             <select name="country" id="main_menu" class="custom-select">
             <!-- <option value="">Select a country</option> -->
             <option value="Yemen">Yemen</option>
             <option value="Egypt">Egypt</option>
             </select>
           </div>
-          <div class="col-md-2">
+          <div class="col" onchange="jsDropDown(3,'img',this.value,'img')">
              <select name="city" id="sub_menu" class="custom-select"></select>
           </div>
        </div>
+    </div>
+
+    <div class="row city">
+        <div class="col-md-3 city-img">
+            <img src="" alt="" id="img1" class="img-city">
+        </div>
+        <div class="col-md-3 city-img">
+            <img src="" alt="" id="img2" class="img-city">
+        </div>
+        <div class="col-md-3 city-img">
+            <img src="" alt="" id="img3" class="img-city">
+        </div>
     </div>
     <script src="js/country.js">
     </script>
