@@ -109,8 +109,11 @@ section p {
     display: flex;
     text-align: center;
     justify-content: center;
-    /* display: none; */
 }
+
+/* .city {
+    display: none;
+} */
 
 .city-img {
     position: relative;

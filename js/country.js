@@ -50,6 +50,8 @@ function jsDropDown(img_size, folder, img_content, img_id) {
    for (i = 1; i < imgs.length + 1; i++) {
       document.getElementById(img_id + i).src = "img" + "/" + string + i + ".jpg";
    }
+
+   // document.getElementsByClassName('city')[0].style.display = 'inline';
    // var x = document.getElementsByClassName("city");
    // if (x.style.display === "none") {
    //    x.style.display = "block";
