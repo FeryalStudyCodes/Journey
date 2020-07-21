@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 
@@ -84,7 +86,7 @@ nav ul li {
 
 nav ul li a {
     position: relative;
-    padding: 5px 0;
+    /* padding: 5px 0; */
     /* color: rgb(26, 98, 180); */
     color: black;
     font-size: 17px;
@@ -92,32 +94,57 @@ nav ul li a {
     text-transform: uppercase;
     font-weight: bold;
     /* display: block; */
+    display: inline-block;
+    margin: 0px 15px;
+    outline: none;
+    color: rgba(0, 0, 0, 0.74);
+    letter-spacing: 1px;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
 }
 
-/* li a {
-    display: block;
-    line-height: 30px;
-} */
+nav ul li a:hover,
+nav ul li a:focus {
+    outline: none;
+}
 
-/* nav ul li a:before {
-    content: '';
-    width: 0px;
-    height: 3px;
-    background: rgb(26, 98, 180);
+.cl-effect-13 a {
+    -webkit-transition: color 0.3s;
+    -moz-transition: color 0.3s;
+    transition: color 0.3s;
+}
+
+.cl-effect-13 a::before {
     position: absolute;
-    top: 80%;
-    left: 0;
-    transition: .5s;
+    top: 40%;
+    left: 50%;
+    color: transparent;
+    content: '•';
+    text-shadow: 0 0 transparent;
+    font-size: 1.2em;
+    -webkit-transition: text-shadow 0.3s, color 0.3s;
+    -moz-transition: text-shadow 0.3s, color 0.3s;
+    transition: text-shadow 0.3s, color 0.3s;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    transform: translateX(-50%);
+    pointer-events: none;
 }
 
-nav ul li:hover a:before {
-    width: 50%;
-    transform: translateX(100%);
+.cl-effect-13 a:hover::before,
+.cl-effect-13 a:focus::before {
+    color: rgb(46, 126, 218);
+    text-shadow: 10px 0 rgb(46, 126, 218),
+        -10px 0 rgb(46, 126, 218);
+}
+
+.cl-effect-13 a:hover,
+.cl-effect-13 a:focus {
+    color: rgb(46, 126, 218);
+}
+
+/* nav ul li:hover {
+    background-color: black;
 } */
-
-nav ul li:hover {
-    background-color: aquamarine;
-}
 
 label #sign-one,
 label #sign-two {

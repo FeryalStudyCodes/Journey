@@ -19,12 +19,13 @@
         </label>
         <!-- <h1 class="page-title">Journey</h1> -->
         <img class="page-title" src="img/journey.png" alt="" style="width: 10em ; height: 5em;">
-        <ul>
-            <li><a class="nav-link" href="#">Home</a></li>
-            <li><a class="nav-link" href="#">Discover</a></li>
-            <li><a class="nav-link" href="#">Places</a></li>
-            <li><a class="nav-link" href="#">About</a></li>
-            <li><a class="nav-link" href="#">Contact</a></li>
+
+        <ul class="cl-effect-13">
+            <li><a class="nav-link" href="#"><span>Home</span></a></li>
+            <li><a class="nav-link" href="#discover"><span>Discover</span></a></li>
+            <li><a class="nav-link" href="#"><span>Places</span></a></li>
+            <li><a class="nav-link" href="#"><span>About</span></a></li>
+            <li><a class="nav-link" href="#"><span>Contact</span></a></li>
         </ul>
     </nav>
 
@@ -43,17 +44,17 @@
         <p>Hello in journey blog</p>
     </section>
 
-    <div class="container-fluid mt-5 discover">
+    <div class="container-fluid mt-5 discover" id="discover">
         <h2>Discover Countries</h2>
         <div class="row">
-            <div class="col">
+            <div class="col col-sm-12 col-md-6 col-lg-6">
                 <select name="country" id="main_menu" class="custom-select">
                     <!-- <option value="">Select a country</option> -->
                     <option value="Yemen">Yemen</option>
                     <option value="Egypt">Egypt</option>
                 </select>
             </div>
-            <div class="col" onchange="jsDropDown(3,'img',this.value,'img')">
+            <div class="col col-sm-12 col-md-6 col-lg-6" onchange="jsDropDown(3,'img',this.value,'img')">
                 <select name="city" id="sub_menu" class="custom-select"></select>
             </div>
         </div>
@@ -71,7 +72,7 @@
         </div>
     </div>
     <script src="js/country.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 
 </html>
