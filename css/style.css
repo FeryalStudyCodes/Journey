@@ -54,6 +54,11 @@ nav {
     max-width: 100%;
 }
 
+.scroll {
+    background-color: white;
+    box-shadow: 10px black;
+}
+
 nav img {
 
     position: absolute;
