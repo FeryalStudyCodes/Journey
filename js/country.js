@@ -62,3 +62,97 @@ window.onscroll = function () {
       myNav.classList.remove("scroll");
    }
 };
+
+function printError(elemId, hintMsg) {
+   document.getElementById(elemId).innerHTML = hintMsg;
+}
+
+function validateForm() {
+
+   var name = document.forms["contactform"]["name"].value;
+   var emailID = document.forms["contactform"]["email"].value;
+   atpos = emailID.indexOf("@");
+   dotpos = emailID.lastIndexOf(".");
+   var password = document.forms["contactform"]["password"].value;
+   var re_password = document.forms["contactform"]["confirm_psw"].value;
+   var website = document.forms["contactform"]["website"].value;
+   var res = ValidURL(website);
+
+   var msg1 = document.getElementById("message1");
+   var msg2 = document.getElementById("message2");
+   var msg3 = document.getElementById("message3");
+   var msg4 = document.getElementById("message4");
+   var msg5 = document.getElementById("message5");
+
+   if (name == null || name == "") {
+      msg1.classList.add("alert-danger");
+      msg1.innerHTML = "<span>Name field is required! </span>";
+      document.forms["contactform"]["name"].focus();
+      return false;
+   } else {
+      msg1.classList.remove("alert-danger");
+      msg1.innerHTML = "";
+   }
+
+   if (atpos < 1 || (dotpos - atpos < 2)) {
+      msg2.classList.add("alert-danger");
+      msg2.innerHTML = "<span>Email field is required!</span>";
+      document.forms["contactform"]["email"].focus();
+      return false;
+   } else {
+      msg2.classList.remove("alert-danger");
+      msg2.innerHTML = "";
+   }
+
+   if (password == null || password == "") {
+      // alert("Password must be filled out");
+      msg3.classList.add("alert-danger");
+      msg3.innerHTML = "<span>Password field is required!</span>";
+      return false;
+   } else {
+      msg3.classList.remove("alert-danger");
+      msg3.innerHTML = "";
+   }
+   if (re_password == null || re_password == "") {
+      // alert("confirm password must be filled out!");
+      msg4.classList.add("alert-danger");
+      msg4.innerHTML = "<span>Confirm Password field is required!</span>";
+      return false;
+   } else {
+      msg4.classList.remove("alert-danger");
+      msg4.innerHTML = "";
+   }
+   if (password == re_password) {
+      // msg4.classList.remove("alert-danger");
+      // msg4.innerHTML = "";
+      return true;
+   } else if (password != re_password) {
+      // alert("password must be same!");
+      msg4.classList.add("alert-danger");
+      msg4.innerHTML = "<span>Password not matched!</span>";
+      return false;
+   } else {
+      msg4.classList.remove("alert-danger");
+      msg4.innerHTML = "";
+   }
+
+   if (website == " ") {
+      msg5.classList.add("alert-danger");
+      msg5.innerHTML = "<span>Url is required</span>";
+      return false;
+   }
+   // else if (!res) {
+   //    document.getElementById("message5").innerHTML = "Enter a valid url";
+   //    //alert(isValid);
+   // }
+}
+
+function ValidURL(link) {
+   var regex = /(http|https):\/\/(\w+:{0,1}\w*)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/;
+   if (!regex.test(link)) {
+      document.getElementById("message5").innerHTML = "Enter a valid url";
+      return false;
+   } else {
+      return true;
+   }
+}

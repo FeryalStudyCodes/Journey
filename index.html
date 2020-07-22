@@ -1,154 +1,206 @@
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Journey</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700" rel="stylesheet" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Crimson+Text|Work+Sans:400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto:300,700"
+      rel="stylesheet"
+    />
+  </head>
 
-<body id="home">
+  <body id="home">
     <nav id="nav">
-        <input type="checkbox" id="res-menu" />
-        <label for="res-menu">
-            <i class="fa fa-bars" id="sign-one"></i>
-            <i class="fa fa-times" id="sign-two"></i>
-        </label>
-        <!-- <h1 class="page-title">Journey</h1> -->
-        <img class="page-title" src="img/journey.png" alt="" style="width: 10em; height: 5em;" />
+      <input type="checkbox" id="res-menu" />
+      <label for="res-menu">
+        <i class="fa fa-bars" id="sign-one"></i>
+        <i class="fa fa-times" id="sign-two"></i>
+      </label>
+      <!-- <h1 class="page-title">Journey</h1> -->
+      <img
+        class="page-title"
+        src="img/journey.png"
+        alt=""
+        style="width: 10em; height: 5em;"
+      />
 
-        <ul class="cl-effect-13">
-            <li>
-                <a class="nav-link" href="#home"><span>Home</span></a>
-            </li>
-            <li>
-                <a class="nav-link" href="#discover"><span>Discover</span></a>
-            </li>
-            <li>
-                <a class="nav-link" href="#"><span>Places</span></a>
-            </li>
-            <li>
-                <a class="nav-link" href="#"><span>About</span></a>
-            </li>
-            <li>
-                <a class="nav-link" href="#contact_container"><span>Contact</span></a>
-            </li>
-        </ul>
+      <ul class="cl-effect-13">
+        <li>
+          <a class="nav-link" href="#home"><span>Home</span></a>
+        </li>
+        <li>
+          <a class="nav-link" href="#discover"><span>Discover</span></a>
+        </li>
+        <li>
+          <a class="nav-link" href="#"><span>Places</span></a>
+        </li>
+        <li>
+          <a class="nav-link" href="#"><span>About</span></a>
+        </li>
+        <li>
+          <a class="nav-link" href="#contact_container"><span>Contact</span></a>
+        </li>
+      </ul>
     </nav>
 
     <div class="banner">
-        <div class="clouds">
-            <img src="img/cloud1.png" alt="" style="--i: 1;" />
-            <img src="img/cloud2.png" alt="" style="--i: 2;" />
-            <img src="img/cloud3.png" alt="" style="--i: 3;" />
-            <img src="img/cloud4.png" alt="" style="--i: 4;" />
-            <img src="img/cloud5.png" alt="" style="--i: 5;" />
-        </div>
+      <div class="clouds">
+        <img src="img/cloud1.png" alt="" style="--i: 1;" />
+        <img src="img/cloud2.png" alt="" style="--i: 2;" />
+        <img src="img/cloud3.png" alt="" style="--i: 3;" />
+        <img src="img/cloud4.png" alt="" style="--i: 4;" />
+        <img src="img/cloud5.png" alt="" style="--i: 5;" />
+      </div>
     </div>
 
     <section class="container">
-        <h2>Travel with us</h2>
-        <p>Hello in journey blog</p>
+      <h2>Travel with us</h2>
+      <p>Hello in journey blog</p>
     </section>
 
     <div class="container-fluid mt-5 discover" id="discover">
-        <h2>Discover Countries</h2>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-6">
-                <select name="country" id="main_menu" class="custom-select">
-                    <!-- <option value="">Select a country</option> -->
-                    <option value="Yemen">Yemen</option>
-                    <option value="Egypt">Egypt</option>
-                </select>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-6" onchange="jsDropDown(3,'img',this.value,'img')">
-                <select name="city" id="sub_menu" class="custom-select"></select>
-            </div>
+      <h2>Discover Countries</h2>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+          <select name="country" id="main_menu" class="custom-select">
+            <!-- <option value="">Select a country</option> -->
+            <option value="Yemen">Yemen</option>
+            <option value="Egypt">Egypt</option>
+          </select>
         </div>
+        <div
+          class="col-sm-12 col-md-6 col-lg-6"
+          onchange="jsDropDown(3,'img',this.value,'img')"
+        >
+          <select name="city" id="sub_menu" class="custom-select"></select>
+        </div>
+      </div>
     </div>
 
     <div class="row city" id="city-con">
-        <div class="col-md-3 city-img">
-            <img src="" alt="" id="img1" class="img-city" />
-        </div>
-        <div class="col-md-3 city-img">
-            <img src="" alt="" id="img2" class="img-city" />
-        </div>
-        <div class="col-md-3 city-img">
-            <img src="" alt="" id="img3" class="img-city" />
-        </div>
+      <div class="col-md-3 city-img">
+        <img src="" alt="" id="img1" class="img-city" />
+      </div>
+      <div class="col-md-3 city-img">
+        <img src="" alt="" id="img2" class="img-city" />
+      </div>
+      <div class="col-md-3 city-img">
+        <img src="" alt="" id="img3" class="img-city" />
+      </div>
     </div>
 
     <div class="container-fluid contact_section" id="contact_container">
-        <div class="contact_title">
-            <h1>
-                Contact us
-            </h1>
-        </div>
-        <p>
-            If you want to join our team or add new contents to our website, all you
-            need to do is fill the next form.
-        </p>
-        <div class="row form_container">
-            <div id="message"></div>
-            <form method="post" action=" " name="contactform" id="contactform" autocomplete="on">
-                <div class="name_con col-md-12">
-                    <label for="username"> Name
-                        <span class="required">*</span>
-                    </label>
-                    <input type="text" name="name" id="name" placeholder="your name" />
-                </div>
-                <div class="email_con col-md-12">
-                    <label for="usermail"> E-mail address
-                        <span class="required">*</span>
-                    </label>
-                    <input type="email" name="email" id="email" placeholder="your email" />
-                </div>
-                <div class="psw_con col-md-12">
-                    <label for="userpasswd"> Password
-                        <span class="required">*</span>
-                    </label>
-                    <input type="password" name="password" id="password" placeholder="your password" />
-                </div>
-                <div class="re-psw_con col-md-12">
-                    <label for="userre_passwd"> Confirm Password
-                        <span class="required">*</span>
-                    </label>
-                    <input type="password" name="confirm_psw" id="confirm_psw" placeholder="confirm your password" />
-                </div>
-                <div class="website_con col-md-12">
-                    <label for="usersite"> Website
-                        <span class="required">*</span>
-                    </label>
-                    <input type="text" name="website" id="website" placeholder="eg: https://www.example.com" />
-                </div>
-                <input type="submit" value="Submit" id="submit" />
-            </form>
-        </div>
+      <div class="contact_title">
+        <h1>
+          Contact us
+        </h1>
+      </div>
+      <p>
+        If you want to join our team or add new contents to our website, all you
+        need to do is fill the next form.
+      </p>
+      <div class="row form_container">
+        <form
+          method="post"
+          action=" "
+          name="contactform"
+          id="contactform"
+          autocomplete="on"
+          onsubmit="return validateForm()"
+        >
+          <div class="name_con col-md-12">
+            <label for="username">
+              Name
+              <span class="required">*</span>
+            </label>
+            <input type="text" name="name" id="name" placeholder="your name" />
+            <div id="message1"></div>
+          </div>
+          <div class="email_con col-md-12">
+            <label for="usermail">
+              E-mail address
+              <span class="required">*</span>
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="your email"
+            />
+            <div id="message2" class="alert"></div>
+          </div>
+          <div class="psw_con col-md-12">
+            <label for="userpasswd">
+              Password
+              <span class="required">*</span>
+            </label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="your password"
+            />
+            <div id="message3" class="alert"></div>
+          </div>
+          <div class="re-psw_con col-md-12">
+            <label for="userre_passwd">
+              Confirm Password
+              <span class="required">*</span>
+            </label>
+            <input
+              type="password"
+              name="confirm_psw"
+              id="confirm_psw"
+              placeholder="confirm your password"
+            />
+            <div id="message4" class="alert"></div>
+          </div>
+          <div class="website_con col-md-12">
+            <label for="usersite">
+              Website
+              <span class="required">*</span>
+            </label>
+            <input
+              type="text"
+              name="website"
+              id="website"
+              placeholder="eg: https://www.example.com"
+            />
+            <div id="message5" class="alert"></div>
+          </div>
+          <input type="submit" value="Submit" id="submit" />
+        </form>
+      </div>
     </div>
     <script src="js/country.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function () {
-            $("a").on("click", function (event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-                    $("html, body").animate({
-                            scrollTop: $(hash).offset().top,
-                        },
-                        800,
-                        function () {
-                            window.location.hash = hash;
-                        }
-                    );
-                }
-            });
+      $(document).ready(function () {
+        $("a").on("click", function (event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                window.location.hash = hash;
+              }
+            );
+          }
         });
+      });
     </script>
-</body>
-
+  </body>
 </html>
